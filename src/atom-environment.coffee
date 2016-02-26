@@ -187,8 +187,7 @@ class AtomEnvironment extends Model
     })
     @themes.workspace = @workspace
 
-    @autoUpdater = new AutoUpdateManager()
-    @autoUpdater.initialize(@applicationDelegate)
+    @autoUpdater = new AutoUpdateManager({@applicationDelegate})
 
     @config.load()
 
